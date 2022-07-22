@@ -35,7 +35,13 @@
 
 
 def one(input1, input2):
-    return ""
+    if len(str(input1)) > len(str(input2)):
+        return input1
+    if len(str(input1)) < len(str(input2)):
+        return input2
+    elif len(str(input1)) == len(str(input2)):
+        return input1 + input2
+
 
    # <QUESTION 2>
 
@@ -61,6 +67,8 @@ def one(input1, input2):
 
 
 def two(input):
+    input.islower()
+    split_input = input.split("bert")
     return ""
 
 
@@ -85,6 +93,15 @@ def two(input):
 
 
 def three(arg1):
+    if arg1 % 3 == 0:
+        return "fizz"
+    if arg1 % 5 == 0:
+        return "buzz"
+    if arg1 % 3 == 0 and arg1 % 5 == 0:
+        return "fizzbuzz"
+    else:
+        return "null"
+
     return ""
 
     # <QUESTION 4>
